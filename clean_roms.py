@@ -79,6 +79,7 @@ class Rom():
         e_p = self.find(ret_base_filename, ')')
         s_b = self.find(ret_base_filename, '[')
         e_b = self.find(ret_base_filename, ']')
+
         for i in range(len(s_p)):
             ret_tokens.append(ret_base_filename[s_p[i]:e_p[i] + 1])
         for i in range(len(s_b)):
@@ -108,22 +109,25 @@ class Rom():
         {'token': '[x]',   'weight': -99, 'description': 'Bad Checksum'},
         {'token': '[!]',   'weight': 100, 'description': 'Verified Good Dump'},
         {'token': '(a)',   'weight': 80,  'description': 'Australian'},
-        {'token': '(C)',   'weight': 0,   'description': 'Chinese'},
-        {'token': '(E)',   'weight': 85,  'description': 'Europe'},
-        {'token': '(F)',   'weight': 0,   'description': 'French'},
-        {'token': '(FN)',  'weight': 0,   'description': 'Finland'},
-        {'token': '(G)',   'weight': 0,   'description': 'German'},
-        {'token': '(GR)',  'weight': 0,   'description': 'Greece'},
+        {'token': '(Chinese)',   'weight': 0,   'description': 'Chinese'},
+        {'token': '(Europe)',   'weight': 85,  'description': 'Europe'},
+        {'token': '(French)',   'weight': 0,   'description': 'French'},
+        {'token': '(Finland)',  'weight': 0,   'description': 'Finland'},
+        {'token': '(German)',   'weight': 0,   'description': 'German'},
+        {'token': '(Greece)',  'weight': 0,   'description': 'Greece'},
         {'token': '(HK)',  'weight': 0,   'description': 'Hong Kong'},
-        {'token': '(I)',   'weight': 0,   'description': 'Italian'},
-        {'token': '(J)',   'weight': 0,   'description': 'Japan'},
-        {'token': '(K)',   'weight': 0,   'description': 'Korean'},
+        {'token': '(Italian)',   'weight': 0,   'description': 'Italian'},
+        {'token': '(Japan)',   'weight': 0,   'description': 'Japan'},
+        {'token': '(Korea)',   'weight': 0,   'description': 'Korean'},
         {'token': '(NL)',  'weight': 0,   'description': 'Dutch'},
         {'token': '(PD)',  'weight': 80,  'description': 'Public Domain'},
-        {'token': '(S)',   'weight': 0,   'description': 'Spanish'},
+        {'token': '(Spanish)',   'weight': 0,   'description': 'Spanish'},
         {'token': '(SW)',  'weight': 0,   'description': 'Sweden'},
-        {'token': '(U)',   'weight': 95,  'description': 'USA'},
+        {'token': '(USA)',   'weight': 95,  'description': 'USA'},
+        {'token': '(USA, Europe)',   'weight': 94,  'description': 'USA, Europe'},
         {'token': '(UK)',  'weight': 90,  'description': 'England'},
+        {'token': '(World)',  'weight': 1,  'description': 'World'},
+        {'token': '(Japan, USA)',  'weight': 93,  'description': 'Japan, USA'},
         {'token': '(Unk)', 'weight': 0,   'description': 'Unknown Country'},
         {'token': '(-)',   'weight': 0,   'description': 'Unknown Country'},
         {'token': '(Sachen-USA)', 'weight':10, 'description': 'found it'},
